@@ -15,6 +15,22 @@ def equalize_hist(img:np.ndarray, hist:np.ndarray):
     global_hist_img = s[img]
     return global_hist_img.astype(int)
 
+def local_equalize_hist(img:np.ndarray, size:(int,int)):
+    local_hist_img = img.copy()
+    h, w = img.shape
+    local_half_r = int(size[0] / 2.0)
+    local_half_c = int(size[1] / 2.0)
+    for i in range(local_half_r, h, local_half_r):
+        for j in range(local_half_c, w, local_half_c):
+            start_i = location_transform(i - local_half_r, h)
+            end_i = location_transform(i + local_half_r, h)
+            start_j = location_transform(j - local_half_c, w)
+            end_j = location_transform(j + local_half_c, w)
+            local_img = local_hist_img[start_i:end_i, start_j:end_j]
+            local_hist = image_hist(local_img)
+            local_hist_img[start_i:end_i, start_j:end_j] = equalize_hist(local_img, local_hist)
+    return local_hist_img
+
 def location_transform(c_position, total):
     if c_position < 0:
         return 0
@@ -28,13 +44,13 @@ def is_shadow(local_mean, local_std, global_mean, global_std, k0, k1, k2, k3):
     temp2 = k2 * global_std <= local_std <= k3 * global_std
     return temp1 and temp2
 
-def get_dark_area(img: np.ndarray, C, local_size, k0, k1, k2, k3):
+def get_dark_area(img: np.ndarray, local_size, k0, k1, k2, k3):
     global_mean = np.mean(img.flatten())
     global_std = np.std(img.flatten())
 
-    shadow_matrix = np.zero((img.shape[0], img.shape[1]))
+    shadow_matrix = np.zeros((img.shape[0], img.shape[1]))
     h, w = img.shape
-    local_half = (local_size / 2.0).astype(int)
+    local_half = int(local_size / 2.0)
     for i in range(img.shape[0]):
         for j in range(img.shape[1]):
             start_i = location_transform(i - local_half, h)
