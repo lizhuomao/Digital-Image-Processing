@@ -3,7 +3,7 @@ import histogram
 import matplotlib.pyplot as plt
 import cv2 as cv
 
-img = cv.imread('Fig0326(a)(embedded_square_noisy_512).tif', cv.IMREAD_GRAYSCALE)
+img = cv.imread('./image/Fig0326(a)(embedded_square_noisy_512).tif', cv.IMREAD_GRAYSCALE)
 
 plt.imshow(img, cmap='gray')
 hist = histogram.image_hist(img)
@@ -28,7 +28,7 @@ plt.bar(np.arange(hist.shape[0]), hist)
 plt.show()
 
 #局部直方图增强
-img = cv.imread('Fig0327(a)(tungsten_original).tif', cv.IMREAD_GRAYSCALE)
+img = cv.imread('./image/Fig0327(a)(tungsten_original).tif', cv.IMREAD_GRAYSCALE)
 local_enhance_img = histogram.local_enhance(img, 3, 3, 0, 0.25, 0, 0.1)
 plt.imshow(np.hstack([img, local_enhance_img]), cmap='gray')
 plt.show()
