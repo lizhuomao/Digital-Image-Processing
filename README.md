@@ -2,14 +2,14 @@
 
 *This Book is property of the Half-Blood Prince*:)
 
-关于冈萨雷斯《数字图像处理》的代码实现
+关于冈萨雷斯《数字图像处理》第四版的代码实现
 
 ## 第三章 灰度变换和空间滤波
 [3.3直方图处理](.\灰度变换与空间滤波\hist_demo.py)
 
 ### 公式 3.49 推导
 
-<img src="assets/lapras-1653658573462.jpg" alt="lapras" style="zoom:50%;" />
+<img src="assets/lapras-1653658573462.jpg" alt="lapras" style="zoom: 25%;" />
 
 [3.4-3.6空间滤波](.\灰度变换与空间滤波\filter_demo.py)
 
@@ -21,3 +21,12 @@
 
 [4.7频率域滤波](./频率域滤波/FFT.ipynb)
 
+## 第五章 图像复原与重建
+
+[5.2噪声模型](./图像复原与重建/IR.ipynb)
+
+[5.3空间滤波](./图像复原与重建/IR.ipynb)
+
+[5.2频率域滤波](./图像复原与重建/IR.ipynb)
+
+*估计退化函数属于盲去卷积，不在这里实现*

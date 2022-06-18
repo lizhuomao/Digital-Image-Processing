@@ -23,11 +23,11 @@ def IHPF(img:np.ndarray, D0:int):
 
 def BHPF(img:np.ndarray, D0:int, n:int):
     H = np.empty_like(img, float)
-    m, n = img.shape[0] / 2, img.shape[1] / 2
+    m, n = img.shape[0] // 2, img.shape[1] // 2
     for y in range(img.shape[0]):
         for x in range(img.shape[1]):
             D = np.sqrt(np.power(x - n, 2) + np.power(y - m, 2))
-            H[y, x] = 1 / (1 + np.power(D / D0, 2 * n))
+            H[y, x] = 1 / (1 + np.power((D + 1e-6)/ D0, 2 * n))
     return 1 - H
 
 
