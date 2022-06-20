@@ -40,16 +40,16 @@
 *其余内容在剩下的对应章节实现*
 ## 第八章 图像压缩和水印
 
-[8.8比特平面编码](./图片压缩和水印/image compression.ipynb)
+[8.8比特平面编码](./图片压缩和水印/imagecompression.ipynb)
 
 ## 第九章 形态学图像处理
 
-[9.2腐蚀和膨胀](./形态学图像处理/Morphological Image Processing.ipynb)
+[9.2腐蚀和膨胀](./形态学图像处理/MorphologicalImageProcessing.ipynb)
 
-[9.3开运算与闭运算](./形态学图像处理/Morphological Image Processing.ipynb)
+[9.3开运算与闭运算](./形态学图像处理/MorphologicalImageProcessing.ipynb)
 
-[9.5基本的形态学算法](./形态学图像处理/Morphological Image Processing.ipynb)
+[9.5基本的形态学算法](./形态学图像处理/MorphologicalImageProcessing.ipynb)
 
 ## 第十章  图像分割
 
-[10.2点线边缘检测](./图像分割/image segmentation.ipynb)
+[10.2点线边缘检测](./图像分割/imagesegmentation.ipynb)
