@@ -2,7 +2,7 @@
 
 *This Book is property of the Half-Blood Prince*:)
 
-关于冈萨雷斯《数字图像处理》第四版的代码实现
+关于冈萨雷斯《数字图像处理》第四版的代码实现。第一章使用python，第一章之后内部算法使用python实现，运行使用ipynb。
 
 ## 第三章 灰度变换和空间滤波
 [3.3直方图处理](.\灰度变换与空间滤波\hist_demo.py)
@@ -38,3 +38,18 @@
 [6.6彩色图像平滑和锐化](./彩色图像处理/CIP.ipynb)
 
 *其余内容在剩下的对应章节实现*
+## 第八章 图像压缩和水印
+
+[8.8比特平面编码](./图像压缩和水印/image compression.ipynb)
+
+## 第九章 形态学图像处理
+
+[9.2腐蚀和膨胀](./形态学图像处理/Morphological Image Processing.ipynb)
+
+[9.3开运算与闭运算](./形态学图像处理/Morphological Image Processing.ipynb)
+
+[9.5基本的形态学算法](./形态学图像处理/Morphological Image Processing.ipynb)
+
+## 第十章  图像分割
+
+[10.2点线边缘检测](./图像分割/image segmentation.ipynb)
