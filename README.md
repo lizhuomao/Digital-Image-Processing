@@ -53,3 +53,6 @@
 ## 第十章  图像分割
 
 [10.2点线边缘检测](./图像分割/imagesegmentation.ipynb)
+
+[10.3阈值处理](./图像分割/imagesegmentation.ipynb)
+
